@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About the Team – BJ's Legal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #b31b1b, #d62a2a);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.2em;
+      margin-bottom: 5px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+      padding: 20px;
+      text-align: center;
+    }
+    .card h3 {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-size: 1.2em;
+      color: #b31b1b;
+    }
+    .card p {
+      font-size: 0.95em;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eee;
+      color: #777;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Meet the BJ’s Legal Team</h1>
+    <p>Get to know the people behind the practice areas</p>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+      <!-- Example lawyer cards -->
+      <div class="card">
+        <h3>Olivia Carter</h3>
+        <p>Specialist in Employment Law and Real Estate. Former labor litigator turned in-house advisor. Loves trail running and SEC regs.</p>
+      </div>
+      <div class="card">
+        <h3>Jamal Singh</h3>
+        <p>Focuses on Contracts and Privacy. CIPP/US certified. Previously at a Fortune 100 tech company. Avid bar trivia host.</p>
+      </div>
+      <div class="card">
+        <h3>Avery Delgado</h3>
+        <p>Leads Immigration Law and Public Company work. Speaks four languages. Previously worked at DHS.</p>
+      </div>
+      <div class="card">
+        <h3>Caroline Mitchell</h3>
+        <p>Data Security and External Matters expert. Known for writing brilliant breach response plans. Cat mom and podcast addict.</p>
+      </div>
+      <div class="card">
+        <h3>Leo Kim</h3>
+        <p>Handles Logistics, Fuel, and B2B contracts. Former energy sector counsel. Can bench press a keg.</p>
+      </div>
+      <div class="card">
+        <h3>Natalie Brooks</h3>
+        <p>Consumer Product Safety and Governance specialist. Previously at CPSC. Excellent karaoke skills.</p>
+      </div>
+      <div class="card">
+        <h3>Marcus O’Neal</h3>
+        <p>Employment Law and Interns lead. Loves compliance training. Has seen every episode of Law & Order twice.</p>
+      </div>
+      <div class="card">
+        <h3>Sofia Vasquez</h3>
+        <p>Real Estate and Contracts. Previously led a national REIT legal team. Passionate about mentorship.</p>
+      </div>
+      <div class="card">
+        <h3>Rajiv Patel</h3>
+        <p>Marketing, Advertising, and CCDP coverage. Ex-agency counsel. Fluent in emoji and FTC regs.</p>
+      </div>
+      <div class="card">
+        <h3>Jenna Thornton</h3>
+        <p>Privacy, Data Security, and Governance. Known for her airtight DPIAs. Runs marathons for fun.</p>
+      </div>
+      <div class="card">
+        <h3>Brian Chu</h3>
+        <p>Contracts and External Relations. Calm in a crisis. Knows contract law and kombucha brewing equally well.</p>
+      </div>
+      <div class="card">
+        <h3>Emily Zhang</h3>
+        <p>Litigation support and whistleblower compliance. Former DOJ litigator. Trivia team ringer.</p>
+      </div>
+      <div class="card">
+        <h3>Gabriel Williams</h3>
+        <p>New Hires and Employment support. Empathetic, effective, espresso-powered.</p>
+      </div>
+      <div class="card">
+        <h3>Priya Kapoor</h3>
+        <p>Immigration and B2B transactions. Previously with USCIS. Skilled in crisis management and cold brew.</p>
+      </div>
+      <div class="card">
+        <h3>Sean Dugan</h3>
+        <p>Marketing and Privacy. Focused on AI and digital compliance. Writes haiku about cookies (the browser kind).</p>
+      </div>
+      <div class="card">
+        <h3>Isabelle Ng</h3>
+        <p>Governance and SEC filings. Once wrote an 8-K during a tornado drill. Ice cream enthusiast.</p>
+      </div>
+      <div class="card">
+        <h3>David Greene</h3>
+        <p>Fuel, Logistics, and Real Estate. Can negotiate a lease and change a tire in under an hour.</p>
+      </div>
+      <div class="card">
+        <h3>Yasmin Al-Rashid</h3>
+        <p>Corporate Governance and CCDP. Previously clerked in the Southern District of NY. Latin jazz saxophonist.</p>
+      </div>
+      <div class="card">
+        <h3>Chloe Bennett</h3>
+        <p>Interns and Compliance. Wrote the onboarding bible. Also writes short fiction on the side.</p>
+      </div>
+      <div class="card">
+        <h3>Andre Brown</h3>
+        <p>Consumer Product Safety and Litigation. Previously with a global manufacturing firm. Dad-joke connoisseur.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 BJ's Wholesale Club – Legal Department. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
