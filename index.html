@@ -1,4 +1,20 @@
-<!DOCTYPE html>
+isplay: none; opacity: 0; transition: opacity 0.5s ease-in-out; }
+    .shoutout-carousel span.active { display: inline-block; opacity: 1; }
+    @keyframes scrollX { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .carousel.scroll { display: flex; overflow: hidden; white-space: nowrap; animation: scrollX 20s linear infinite; }
+    .carousel.scroll img { flex: 0 0 auto; margin-right: 10px; height: 100px; border-radius: 8px; }
+    .calendar { text-align: center; }
+    .calendar p { font-size: 0.95em; color: #555; }
+    .birthdays ul { list-style: none; padding-left: 0; font-size: 0.95em; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BJ's Legal Intranet</h1>
+    <p>Confidential – Internal Use Only</p>
+  </header>
+  <div class="sticky-nav">
+    <section style="padding: 20px; max-wid<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,165 +23,26 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #f8f9fa, #e9ecef);
-      color: #1a1a1a;
-    }
-    header {
-      background: linear-gradient(to right, #b31b1b, #d62a2a);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    header h1 {
-      font-size: 2.8em;
-      margin-bottom: 5px;
-    }
-    header p {
-      font-style: italic;
-      font-size: 1em;
-      opacity: 0.8;
-    }
-    .sticky-nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: white;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .nav-group {
-      position: relative;
-      display: inline-block;
-    }
-    .nav-tile {
-      display: inline-block;
-      text-decoration: none;
-      color: #b31b1b;
-      border: 1px solid #b31b1b;
-      padding: 10px 16px;
-      border-radius: 6px;
-      font-weight: 500;
-      transition: all 0.2s ease-in-out;
-      background-color: white;
-    }
-    .nav-tile:hover {
-      background-color: #b31b1b;
-      color: white;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: white;
-      min-width: 240px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      border: 1px solid #b31b1b;
-      border-radius: 6px;
-      z-index: 1;
-      top: 45px;
-    }
-    .dropdown-content a {
-      color: #b31b1b;
-      padding: 10px 16px;
-      display: block;
-      text-decoration: none;
-      font-size: 0.95em;
-    }
-    .dropdown-content a:hover {
-      background-color: #f2f2f2;
-    }
-    .nav-group:hover .dropdown-content {
-      display: block;
-    }
-
-    .animated-section {
-      opacity: 0;
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-up {
-      transform: translateY(30px);
-    }
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 40px 20px;
-      background-color: #f1f1f1;
-    }
-    .footer-column {
-      background: white;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    .footer-column h3 {
-      color: #b31b1b;
-      margin-top: 0;
-    }
-    .shoutout-carousel {
-      text-align: center;
-      padding: 60px 20px;
-      background-color: white;
-      font-size: 1.2em;
-      font-weight: 500;
-      min-height: 80px;
-      transition: opacity 0.5s ease-in-out;
-      position: relative;
-    }
-    .shoutout-carousel span {
-      display: none;
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-    }
-    .shoutout-carousel span.active {
-      display: inline-block;
-      opacity: 1;
-    }
-    @keyframes scrollX {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .carousel.scroll {
-      display: flex;
-      overflow: hidden;
-      white-space: nowrap;
-      animation: scrollX 20s linear infinite;
-    }
-    .carousel.scroll img {
-      flex: 0 0 auto;
-      margin-right: 10px;
-      height: 100px;
-      border-radius: 8px;
-    }
-    .calendar {
-      text-align: center;
-    }
-    .calendar p {
-      font-size: 0.95em;
-      color: #555;
-    }
-    .birthdays ul {
-      list-style: none;
-      padding-left: 0;
-      font-size: 0.95em;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>BJ's Legal Intranet</h1>
-    <p>Confidential – Internal Use Only</p>
-  </header>
-
-  <div class="sticky-nav">
-    <section style="padding: 20px; max-width: 1200px; margin: auto;">
+    body { margin: 0; font-family: 'Inter', sans-serif; background: linear-gradient(to right, #f8f9fa, #e9ecef); color: #1a1a1a; }
+    header { background: linear-gradient(to right, #b31b1b, #d62a2a); color: white; padding: 40px 20px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+    header h1 { font-size: 2.8em; margin-bottom: 5px; }
+    header p { font-style: italic; font-size: 1em; opacity: 0.8; }
+    .sticky-nav { position: sticky; top: 0; z-index: 1000; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .nav-group { position: relative; display: inline-block; }
+    .nav-tile { display: inline-block; text-decoration: none; color: #b31b1b; border: 1px solid #b31b1b; padding: 10px 16px; border-radius: 6px; font-weight: 500; transition: all 0.2s ease-in-out; background-color: white; }
+    .nav-tile:hover { background-color: #b31b1b; color: white; }
+    .dropdown-content { display: none; position: absolute; background-color: white; min-width: 240px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); border: 1px solid #b31b1b; border-radius: 6px; z-index: 1; top: 45px; }
+    .dropdown-content a { color: #b31b1b; padding: 10px 16px; display: block; text-decoration: none; font-size: 0.95em; }
+    .dropdown-content a:hover { background-color: #f2f2f2; }
+    .nav-group:hover .dropdown-content { display: block; }
+    .animated-section { opacity: 0; transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up { transform: translateY(30px); }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 40px 20px; background-color: #f1f1f1; }
+    .footer-column { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .footer-column h3 { color: #b31b1b; margin-top: 0; }
+    .shoutout-carousel { text-align: center; padding: 60px 20px; background-color: white; font-size: 1.2em; font-weight: 500; min-height: 80px; transition: opacity 0.5s ease-in-out; position: relative; }
+    .shoutout-carousel span { dth: 1200px; margin: auto;">
       <div style="margin-bottom: 20px;">
         <h2 style="color: #b31b1b;">Practice Areas</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 10px;">
@@ -174,9 +51,9 @@
             <div class="dropdown-content">
               <a href="employment.html#fmla">FMLA</a>
               <a href="employment.html#ada">ADA Accommodations</a>
+              <a href="employment.html#investigations">Investigations</a>
               <a href="employment.html#discipline">Discipline</a>
               <a href="employment.html#terminations">Terminations</a>
-              <a href="employment.html#investigations">Investigations</a>
             </div>
           </div>
           <div class="nav-group">
@@ -195,14 +72,70 @@
               <a href="governance.html#sec">SEC Reporting</a>
             </div>
           </div>
-          <a href="privacy.html" class="nav-tile">Privacy & Data Security</a>
-          <a href="contracts.html" class="nav-tile">Contracts</a>
-          <a href="marketing.html" class="nav-tile">Marketing</a>
-          <a href="b2b.html" class="nav-tile">B2B</a>
-          <a href="logistics.html" class="nav-tile">Logistics & Fuel</a>
-          <a href="external.html" class="nav-tile">External Matters</a>
-          <a href="realestate.html" class="nav-tile">Real Estate</a>
-          <a href="productsafety.html" class="nav-tile">Product Safety</a>
+          <div class="nav-group">
+            <a href="privacy.html" class="nav-tile">Privacy & Data Security</a>
+            <div class="dropdown-content">
+              <a href="privacy.html#ccpa">CCPA</a>
+              <a href="privacy.html#gdpr">GDPR</a>
+              <a href="privacy.html#incidents">Data Incidents</a>
+            </div>
+          </div>
+          <div class="nav-group">
+            <a href="contracts.html" class="nav-tile">Contracts</a>
+            <div class="dropdown-content">
+              <a href="contracts.html#ndas">NDAs</a>
+              <a href="contracts.html#msas">MSAs</a>
+              <a href="contracts.html#sows">SOWs</a>
+            </div>
+          </div>
+          <div class="nav-group">
+            <a href="marketing.html" class="nav-tile">Marketing</a>
+            <div class="dropdown-content">
+              <a href="marketing.html#claims">Claims Review</a>
+              <a href="marketing.html#sweepstakes">Sweepstakes</a>
+              <a href="marketing.html#influencers">Influencers</a>
+            </div>
+          </div>
+          <div class="nav-group">
+            <a href="b2b.html" class="nav-tile">B2B</a>
+            <div class="dropdown-content">
+              <a href="b2b.html#membership">Membership Deals</a>
+              <a href="b2b.html#vendors">Vendor Policies</a>
+              <a href="b2b.html#partners">Partner Contracts</a>
+            </div>
+          </div>
+          <div class="nav-group">
+            <a href="logistics.html" class="nav-tile">Logistics & Fuel</a>
+            <div class="dropdown-content">
+              <a href="logistics.html#transport">Transportation</a>
+              <a href="logistics.html#fuel">Fuel Agreements</a>
+              <a href="logistics.html#warehousing">Warehousing</a>
+            </div>
+          </div>
+          <div class="nav-group">
+            <a href="external.html" class="nav-tile">External Matters</a>
+            <div class="dropdown-content">
+              <a href="external.html#subpoenas">Subpoenas</a>
+              <a href="external.html#litigation">Litigation</a>
+              <a href="external.html#regulatory">Regulatory Inquiries</a>
+            </div>
+          </div>
+          <div class="nav-group">
+            <a href="realestate.html" class="nav-tile">Real Estate</a>
+            <div class="dropdown-content">
+              <a href="realestate.html#leases">Leases</a>
+              <a href="realestate.html#development">Development</a>
+              <a href="realestate.html#site-issues">Site Issues</a>
+            </div>
+          </div>
+          <div class="nav-group">
+            <a href="productsafety.html" class="nav-tile">Product Safety</a>
+            <div class="dropdown-content">
+              <a href="productsafety.html#recalls">Recalls</a>
+              <a href="productsafety.html#labeling">Labeling</a>
+              <a href="productsafety.html#incidents">Incident Reports</a>
+            </div>
+          </div>
         </div>
       </div>
       <div>
@@ -217,14 +150,12 @@
       </div>
     </section>
   </div>
-
   <section class="shoutout-carousel animated-section fade-up">
     <span class="active">🎉 Huge kudos to Sofia V. for closing the HQ lease!</span>
     <span>👏 Gabriel W. led a flawless investigation last week.</span>
     <span>🙌 Congrats to Emily Z. for winning the ethics award!</span>
     <span>🎯 Jenna T. delivered all compliance audits early!</span>
   </section>
-
   <div class="footer-grid animated-section fade-up">
     <div class="footer-column">
       <h3>Team Photos</h3>
@@ -250,9 +181,7 @@
       </ul>
     </div>
   </div>
-
   <script>
-    // Scroll-triggered animation
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -260,10 +189,7 @@
         }
       });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.animated-section').forEach(el => observer.observe(el));
-
-    // Shoutout carousel logic
     const shoutouts = document.querySelectorAll('.shoutout-carousel span');
     let idx = 0;
     setInterval(() => {
@@ -272,6 +198,5 @@
       shoutouts[idx].classList.add('active');
     }, 4000);
   </script>
-
 </body>
 </html>
