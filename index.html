@@ -66,6 +66,202 @@
       z-index: 1;
       top: 45px;
     }
-    .dropdown-
+    .dropdown-content a {
+      color: #b31b1b;
+      padding: 10px 16px;
+      display: block;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+    .dropdown-content a:hover {
+      background-color: #f2f2f2;
+    }
+    .nav-group:hover .dropdown-content {
+      display: block;
+    }
 
-    
+    .animated-section {
+      opacity: 0;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up {
+      transform: translateY(30px);
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #f1f1f1;
+    }
+    .footer-column {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .footer-column h3 {
+      color: #b31b1b;
+      margin-top: 0;
+    }
+    .shoutout-carousel {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: white;
+      font-size: 1.2em;
+      font-weight: 500;
+      min-height: 80px;
+      transition: opacity 0.5s ease-in-out;
+      position: relative;
+    }
+    .shoutout-carousel span {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .shoutout-carousel span.active {
+      display: inline-block;
+      opacity: 1;
+    }
+    @keyframes scrollX {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .carousel.scroll {
+      display: flex;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: scrollX 20s linear infinite;
+    }
+    .carousel.scroll img {
+      flex: 0 0 auto;
+      margin-right: 10px;
+      height: 100px;
+      border-radius: 8px;
+    }
+    .calendar {
+      text-align: center;
+    }
+    .calendar p {
+      font-size: 0.95em;
+      color: #555;
+    }
+    .birthdays ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BJ's Legal Intranet</h1>
+    <p>Confidential – Internal Use Only</p>
+  </header>
+
+  <div class="sticky-nav">
+    <section style="padding: 20px; max-width: 1200px; margin: auto;">
+      <div style="margin-bottom: 20px;">
+        <h2 style="color: #b31b1b;">Practice Areas</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <div class="nav-group">
+            <a href="employment.html" class="nav-tile">Employment Law</a>
+            <div class="dropdown-content">
+              <a href="employment.html#fmla">FMLA</a>
+              <a href="employment.html#discrimination">Discrimination</a>
+              <a href="employment.html#handbooks">Handbooks</a>
+            </div>
+          </div>
+          <div class="nav-group">
+            <a href="immigration.html" class="nav-tile">Immigration Law</a>
+            <div class="dropdown-content">
+              <a href="immigration.html#visas">Visas</a>
+              <a href="immigration.html#i9">I-9 Compliance</a>
+            </div>
+          </div>
+          <a href="governance.html" class="nav-tile">Corporate Governance</a>
+          <a href="privacy.html" class="nav-tile">Privacy & Data Security</a>
+          <a href="contracts.html" class="nav-tile">Contracts</a>
+          <a href="marketing.html" class="nav-tile">Marketing</a>
+          <a href="b2b.html" class="nav-tile">B2B</a>
+          <a href="logistics.html" class="nav-tile">Logistics & Fuel</a>
+          <a href="external.html" class="nav-tile">External Matters</a>
+          <a href="realestate.html" class="nav-tile">Real Estate</a>
+          <a href="productsafety.html" class="nav-tile">Product Safety</a>
+        </div>
+      </div>
+      <div>
+        <h2 style="color: #b31b1b;">Team & Admin</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <a href="about.html" class="nav-tile">About the Team</a>
+          <a href="ccdp.html" class="nav-tile">CCDP</a>
+          <a href="newhires.html" class="nav-tile">New Hires</a>
+          <a href="interns.html" class="nav-tile">Interns</a>
+          <a href="calendar.html" class="nav-tile">Team Calendar</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="shoutout-carousel animated-section fade-up">
+    <span class="active">🎉 Huge kudos to Sofia V. for closing the HQ lease!</span>
+    <span>👏 Gabriel W. led a flawless investigation last week.</span>
+    <span>🙌 Congrats to Emily Z. for winning the ethics award!</span>
+    <span>🎯 Jenna T. delivered all compliance audits early!</span>
+  </section>
+
+  <div class="footer-grid animated-section fade-up">
+    <div class="footer-column">
+      <h3>Team Photos</h3>
+      <div class="carousel scroll">
+        <img src="https://via.placeholder.com/100" alt="Team Member 1" />
+        <img src="https://via.placeholder.com/100" alt="Team Member 2" />
+        <img src="https://via.placeholder.com/100" alt="Team Member 3" />
+        <img src="https://via.placeholder.com/100" alt="Team Member 4" />
+        <img src="https://via.placeholder.com/100" alt="Team Member 5" />
+      </div>
+    </div>
+    <div class="footer-column calendar">
+      <h3>Team Calendar</h3>
+      <p>📅 Next All-Hands: August 5, 2025<br>🗓️ Quarterly Training: September 12, 2025</p>
+    </div>
+    <div class="footer-column birthdays">
+      <h3>Birthdays & Work Anniversaries</h3>
+      <ul>
+        <li>🎂 Jenna T. – July 14</li>
+        <li>🎉 Leo K. – 5 Years on Aug 1</li>
+        <li>🎂 Olivia C. – Aug 12</li>
+        <li>🎉 Rajiv P. – 10 Years on Sep 3</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Scroll-triggered animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animated-section').forEach(el => observer.observe(el));
+
+    // Shoutout carousel logic
+    const shoutouts = document.querySelectorAll('.shoutout-carousel span');
+    let idx = 0;
+    setInterval(() => {
+      shoutouts[idx].classList.remove('active');
+      idx = (idx + 1) % shoutouts.length;
+      shoutouts[idx].classList.add('active');
+    }, 4000);
+  </script>
+
+</body>
+</html>
