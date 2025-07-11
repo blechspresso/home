@@ -12,13 +12,14 @@
       font-family: 'Inter', sans-serif;
       background: linear-gradient(to right, #f8f9fa, #e9ecef);
       color: #1a1a1a;
+      padding: 20px;
     }
     header {
       background: linear-gradient(to right, #b31b1b, #d62a2a);
       color: white;
       padding: 40px 20px;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin: -20px -20px 30px -20px;
     }
     header h1 {
       font-size: 2.8em;
@@ -29,101 +30,41 @@
       font-size: 1em;
       opacity: 0.8;
     }
-    .sticky-nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: white;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .nav-tile {
-      display: inline-block;
-      text-decoration: none;
-      color: #b31b1b;
-      border: 1px solid #b31b1b;
-      padding: 10px 16px;
-      border-radius: 6px;
-      font-weight: 500;
-      transition: all 0.2s ease-in-out;
-    }
-    .nav-tile:hover {
-      background-color: #b31b1b;
-      color: white;
-    }
-    .animated-section {
-      opacity: 0;
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-up {
-      transform: translateY(30px);
-    }
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    .shoutout-section {
+      display: flex;
+      flex-wrap: wrap;
       gap: 20px;
-      padding: 40px 20px;
-      background-color: #f1f1f1;
+      margin-bottom: 40px;
     }
-    .footer-column {
-      background: white;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    .footer-column h3 {
-      color: #b31b1b;
-      margin-top: 0;
-    }
-    .shoutout-carousel {
-      text-align: center;
-      padding: 60px 20px;
+    .shoutout-column {
+      flex: 1;
+      min-width: 280px;
       background-color: white;
-      font-size: 1.2em;
-      font-weight: 500;
-      min-height: 80px;
-      transition: opacity 0.5s ease-in-out;
-      position: relative;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
-    .shoutout-carousel span {
+    .carousel-block span {
       display: none;
       opacity: 0;
       transition: opacity 0.5s ease-in-out;
     }
-    .shoutout-carousel span.active {
+    .carousel-block span.active {
       display: inline-block;
       opacity: 1;
     }
-    @keyframes scrollX {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .carousel.scroll {
-      display: flex;
-      overflow: hidden;
-      white-space: nowrap;
-      animation: scrollX 20s linear infinite;
-    }
-    .carousel.scroll img {
-      flex: 0 0 auto;
-      margin-right: 10px;
-      height: 100px;
-      border-radius: 8px;
-    }
-    .calendar {
+    .carousel-block {
+      font-size: 1.2em;
+      font-weight: 500;
+      min-height: 80px;
+      position: relative;
       text-align: center;
     }
-    .calendar p {
-      font-size: 0.95em;
-      color: #555;
-    }
-    .birthdays ul {
-      list-style: none;
-      padding-left: 0;
-      font-size: 0.95em;
+    h2.section-label {
+      color: #b31b1b;
+      font-size: 1.2em;
+      text-align: center;
+      margin-top: 0;
     }
   </style>
 </head>
@@ -134,90 +75,40 @@
     <p>Confidential – Internal Use Only</p>
   </header>
 
-  <div class="sticky-nav">
-    <section style="padding: 20px; max-width: 1200px; margin: auto;">
-      <div style="margin-bottom: 20px;">
-        <h2 style="color: #b31b1b;">Practice Areas</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-          <a href="employment.html" class="nav-tile">Employment Law</a>
-          <a href="immigration.html" class="nav-tile">Immigration Law</a>
-          <a href="governance.html" class="nav-tile">Corporate Governance</a>
-          <a href="privacy.html" class="nav-tile">Privacy & Data Security</a>
-          <a href="contracts.html" class="nav-tile">Contracts</a>
-          <a href="marketing.html" class="nav-tile">Marketing</a>
-          <a href="b2b.html" class="nav-tile">B2B</a>
-          <a href="logistics.html" class="nav-tile">Logistics & Fuel</a>
-          <a href="external.html" class="nav-tile">External Matters</a>
-          <a href="realestate.html" class="nav-tile">Real Estate</a>
-          <a href="productsafety.html" class="nav-tile">Product Safety</a>
-        </div>
-      </div>
-      <div>
-        <h2 style="color: #b31b1b;">Team & Admin</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-          <a href="about.html" class="nav-tile">About the Team</a>
-          <a href="ccdp.html" class="nav-tile">CCDP</a>
-          <a href="newhires.html" class="nav-tile">New Hires</a>
-          <a href="interns.html" class="nav-tile">Interns</a>
-          <a href="calendar.html" class="nav-tile">Team Calendar</a>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <section class="shoutout-carousel animated-section fade-up">
-    <span class="active">🎉 Huge kudos to Sofia V. for closing the HQ lease!</span>
-    <span>👏 Gabriel W. led a flawless investigation last week.</span>
-    <span>🙌 Congrats to Emily Z. for winning the ethics award!</span>
-    <span>🎯 Jenna T. delivered all compliance audits early!</span>
-  </section>
-
-  <div class="footer-grid animated-section fade-up">
-    <div class="footer-column">
-      <h3>Team Photos</h3>
-      <div class="carousel scroll">
-        <img src="https://via.placeholder.com/100" alt="Team Member 1" />
-        <img src="https://via.placeholder.com/100" alt="Team Member 2" />
-        <img src="https://via.placeholder.com/100" alt="Team Member 3" />
-        <img src="https://via.placeholder.com/100" alt="Team Member 4" />
-        <img src="https://via.placeholder.com/100" alt="Team Member 5" />
+  <div class="shoutout-section">
+    <div class="shoutout-column">
+      <h2 class="section-label">🎉 Team Shoutouts</h2>
+      <div class="carousel-block" id="shoutout-carousel">
+        <span class="active">👏 Olivia C. resolved a complex ADA case last week!</span>
+        <span>🎯 Rajiv P. finalized the FTC compliance memo.</span>
+        <span>🙌 Marcus O. led onboarding for 6 new hires.</span>
+        <span>🎉 Emily Z. crushed it in the DEI town hall.</span>
       </div>
     </div>
-    <div class="footer-column calendar">
-      <h3>Team Calendar</h3>
-      <p>📅 Next All-Hands: August 5, 2025<br>🗓️ Quarterly Training: September 12, 2025</p>
-    </div>
-    <div class="footer-column birthdays">
-      <h3>Birthdays & Work Anniversaries</h3>
-      <ul>
-        <li>🎂 Jenna T. – July 14</li>
-        <li>🎉 Leo K. – 5 Years on Aug 1</li>
-        <li>🎂 Olivia C. – Aug 12</li>
-        <li>🎉 Rajiv P. – 10 Years on Sep 3</li>
-      </ul>
+    <div class="shoutout-column">
+      <h2 class="section-label">📰 Team Bulletins</h2>
+      <div class="carousel-block" id="news-carousel">
+        <span class="active">📢 Q3 legal policy update posted to Contracts.</span>
+        <span>📅 Don't miss the FCPA refresher training on Sept 12.</span>
+        <span>✅ Real Estate template package now live.</span>
+        <span>📎 Updated litigation tracker available in External Matters.</span>
+      </div>
     </div>
   </div>
 
   <script>
-    // Scroll-triggered animation
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
+    function rotateCarousel(id) {
+      const items = document.querySelectorAll(`#${id} span`);
+      let i = 0;
+      setInterval(() => {
+        items[i].classList.remove("active");
+        i = (i + 1) % items.length;
+        items[i].classList.add("active");
+      }, 4000);
+    }
 
-    document.querySelectorAll('.animated-section').forEach(el => observer.observe(el));
-
-    // Shoutout carousel logic
-    const shoutouts = document.querySelectorAll('.shoutout-carousel span');
-    let idx = 0;
-    setInterval(() => {
-      shoutouts[idx].classList.remove('active');
-      idx = (idx + 1) % shoutouts.length;
-      shoutouts[idx].classList.add('active');
-    }, 4000);
+    rotateCarousel("shoutout-carousel");
+    rotateCarousel("news-carousel");
   </script>
 
 </body>
