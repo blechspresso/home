@@ -29,6 +29,13 @@
       font-size: 1em;
       opacity: 0.8;
     }
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
     .nav-tile {
       display: inline-block;
       text-decoration: none;
@@ -43,17 +50,16 @@
       background-color: #b31b1b;
       color: white;
     }
-    .hero {
-      text-align: center;
-      padding: 60px 20px 40px;
+    .animated-section {
+      opacity: 0;
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    .hero h2 {
-      font-size: 2.2em;
-      margin-bottom: 10px;
+    .fade-up {
+      transform: translateY(30px);
     }
-    .hero p {
-      font-size: 1.1em;
-      color: #555;
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     .footer-grid {
       display: grid;
@@ -71,6 +77,25 @@
     .footer-column h3 {
       color: #b31b1b;
       margin-top: 0;
+    }
+    .shoutout-carousel {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: white;
+      font-size: 1.2em;
+      font-weight: 500;
+      min-height: 80px;
+      transition: opacity 0.5s ease-in-out;
+      position: relative;
+    }
+    .shoutout-carousel span {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .shoutout-carousel span.active {
+      display: inline-block;
+      opacity: 1;
     }
     @keyframes scrollX {
       0% { transform: translateX(0); }
@@ -109,42 +134,45 @@
     <p>Confidential – Internal Use Only</p>
   </header>
 
-  <section style="padding: 40px 20px; max-width: 1200px; margin: auto;">
-    <div style="margin-bottom: 40px;">
-      <h2 style="color: #b31b1b;">Practice Areas</h2>
-      <div style="display: flex; flex-wrap: wrap; gap: 15px; background: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-        <a href="employment.html" class="nav-tile">Employment Law</a>
-        <a href="immigration.html" class="nav-tile">Immigration Law</a>
-        <a href="governance.html" class="nav-tile">Corporate Governance</a>
-        <a href="privacy.html" class="nav-tile">Privacy & Data Security</a>
-        <a href="contracts.html" class="nav-tile">Contracts</a>
-        <a href="marketing.html" class="nav-tile">Marketing</a>
-        <a href="b2b.html" class="nav-tile">B2B</a>
-        <a href="logistics.html" class="nav-tile">Logistics & Fuel</a>
-        <a href="external.html" class="nav-tile">External Matters</a>
-        <a href="realestate.html" class="nav-tile">Real Estate</a>
-        <a href="productsafety.html" class="nav-tile">Product Safety</a>
+  <div class="sticky-nav">
+    <section style="padding: 20px; max-width: 1200px; margin: auto;">
+      <div style="margin-bottom: 20px;">
+        <h2 style="color: #b31b1b;">Practice Areas</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <a href="employment.html" class="nav-tile">Employment Law</a>
+          <a href="immigration.html" class="nav-tile">Immigration Law</a>
+          <a href="governance.html" class="nav-tile">Corporate Governance</a>
+          <a href="privacy.html" class="nav-tile">Privacy & Data Security</a>
+          <a href="contracts.html" class="nav-tile">Contracts</a>
+          <a href="marketing.html" class="nav-tile">Marketing</a>
+          <a href="b2b.html" class="nav-tile">B2B</a>
+          <a href="logistics.html" class="nav-tile">Logistics & Fuel</a>
+          <a href="external.html" class="nav-tile">External Matters</a>
+          <a href="realestate.html" class="nav-tile">Real Estate</a>
+          <a href="productsafety.html" class="nav-tile">Product Safety</a>
+        </div>
       </div>
-    </div>
+      <div>
+        <h2 style="color: #b31b1b;">Team & Admin</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <a href="about.html" class="nav-tile">About the Team</a>
+          <a href="ccdp.html" class="nav-tile">CCDP</a>
+          <a href="newhires.html" class="nav-tile">New Hires</a>
+          <a href="interns.html" class="nav-tile">Interns</a>
+          <a href="calendar.html" class="nav-tile">Team Calendar</a>
+        </div>
+      </div>
+    </section>
+  </div>
 
-    <div>
-      <h2 style="color: #b31b1b;">Team & Admin</h2>
-      <div style="display: flex; flex-wrap: wrap; gap: 15px; background: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-        <a href="about.html" class="nav-tile">About the Team</a>
-        <a href="ccdp.html" class="nav-tile">CCDP</a>
-        <a href="newhires.html" class="nav-tile">New Hires</a>
-        <a href="interns.html" class="nav-tile">Interns</a>
-        <a href="calendar.html" class="nav-tile">Team Calendar</a>
-      </div>
-    </div>
+  <section class="shoutout-carousel animated-section fade-up">
+    <span class="active">🎉 Huge kudos to Sofia V. for closing the HQ lease!</span>
+    <span>👏 Gabriel W. led a flawless investigation last week.</span>
+    <span>🙌 Congrats to Emily Z. for winning the ethics award!</span>
+    <span>🎯 Jenna T. delivered all compliance audits early!</span>
   </section>
 
-  <section class="hero">
-    <h2>Welcome to the Legal Department Portal</h2>
-    <p>Explore our subject matter areas, resources, and team directory</p>
-  </section>
-
-  <div class="footer-grid">
+  <div class="footer-grid animated-section fade-up">
     <div class="footer-column">
       <h3>Team Photos</h3>
       <div class="carousel scroll">
@@ -153,7 +181,6 @@
         <img src="https://via.placeholder.com/100" alt="Team Member 3" />
         <img src="https://via.placeholder.com/100" alt="Team Member 4" />
         <img src="https://via.placeholder.com/100" alt="Team Member 5" />
-        <img src="https://via.placeholder.com/100" alt="Team Member 6" />
       </div>
     </div>
     <div class="footer-column calendar">
@@ -170,6 +197,28 @@
       </ul>
     </div>
   </div>
+
+  <script>
+    // Scroll-triggered animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animated-section').forEach(el => observer.observe(el));
+
+    // Shoutout carousel logic
+    const shoutouts = document.querySelectorAll('.shoutout-carousel span');
+    let idx = 0;
+    setInterval(() => {
+      shoutouts[idx].classList.remove('active');
+      idx = (idx + 1) % shoutouts.length;
+      shoutouts[idx].classList.add('active');
+    }, 4000);
+  </script>
 
 </body>
 </html>
