@@ -1,20 +1,4 @@
-isplay: none; opacity: 0; transition: opacity 0.5s ease-in-out; }
-    .shoutout-carousel span.active { display: inline-block; opacity: 1; }
-    @keyframes scrollX { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .carousel.scroll { display: flex; overflow: hidden; white-space: nowrap; animation: scrollX 20s linear infinite; }
-    .carousel.scroll img { flex: 0 0 auto; margin-right: 10px; height: 100px; border-radius: 8px; }
-    .calendar { text-align: center; }
-    .calendar p { font-size: 0.95em; color: #555; }
-    .birthdays ul { list-style: none; padding-left: 0; font-size: 0.95em; }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>BJ's Legal Intranet</h1>
-    <p>Confidential – Internal Use Only</p>
-  </header>
-  <div class="sticky-nav">
-    <section style="padding: 20px; max-wid<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -42,7 +26,23 @@ isplay: none; opacity: 0; transition: opacity 0.5s ease-in-out; }
     .footer-column { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
     .footer-column h3 { color: #b31b1b; margin-top: 0; }
     .shoutout-carousel { text-align: center; padding: 60px 20px; background-color: white; font-size: 1.2em; font-weight: 500; min-height: 80px; transition: opacity 0.5s ease-in-out; position: relative; }
-    .shoutout-carousel span { dth: 1200px; margin: auto;">
+    .shoutout-carousel span { display: none; opacity: 0; transition: opacity 0.5s ease-in-out; }
+    .shoutout-carousel span.active { display: inline-block; opacity: 1; }
+    @keyframes scrollX { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .carousel.scroll { display: flex; overflow: hidden; white-space: nowrap; animation: scrollX 20s linear infinite; }
+    .carousel.scroll img { flex: 0 0 auto; margin-right: 10px; height: 100px; border-radius: 8px; }
+    .calendar { text-align: center; }
+    .calendar p { font-size: 0.95em; color: #555; }
+    .birthdays ul { list-style: none; padding-left: 0; font-size: 0.95em; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BJ's Legal Intranet</h1>
+    <p>Confidential – Internal Use Only</p>
+  </header>
+  <div class="sticky-nav">
+    <section style="padding: 20px; max-width: 1200px; margin: auto;">
       <div style="margin-bottom: 20px;">
         <h2 style="color: #b31b1b;">Practice Areas</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 10px;">
